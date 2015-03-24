@@ -17,7 +17,7 @@ app.engine('html',swig.renderFile);
 app.set('views', __dirname+'/views');
 app.set('view engine', 'html');
 
-
+app.use('/bower_components', express.static(__dirname + '/bower_components'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

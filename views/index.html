@@ -7,34 +7,34 @@
   <div class="text-left">
     <h1>Welcome to {{title}}</h1>
     <p class="lead"> Hotels </p>
-    
+    	<select> 
       {% if hotels.length > 0 %}
-        <ul>
           {% for hotel in hotels %}
-            <li>{{hotel['name']}}</li>
+           <option value="{{hotel['name']}}">{{hotel['name']}}</option>
           {% endfor %}
-        </ul>
+        </select>
       {% else %}
         There are no pages. Why don't you <a href='/add'>add one</a>?
       {% endif %}
-    	
 
+      	<select>
     	{% if restaurants.length > 0 %}
-        <ul>
+        
           {% for restaurant in restaurants %}
-            <li>{{restaurant['name']}}</li>
+             <option value="{{restaurant['name']}}">{{restaurant['name']}}</option>
           {% endfor %}
-        </ul>
+        </select>
       {% else %}
         There are no pages. Why don't you <a href='/add'>add one</a>?
       {% endif %}
 
-      {% if things.length > 0 %}
-        <ul>
+      <select>
+    	{% if things.length > 0 %}
+        
           {% for thing in things %}
-            <li>{{thing['name']}}</li>
+             <option value="{{thing['name']}}">{{thing['name']}}</option>
           {% endfor %}
-        </ul>
+        </select>
       {% else %}
         There are no pages. Why don't you <a href='/add'>add one</a>?
       {% endif %}
