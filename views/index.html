@@ -1,0 +1,45 @@
+
+{% block content %}
+
+ 
+
+<div class="container">
+  <div class="text-left">
+    <h1>Welcome to {{title}}</h1>
+    <p class="lead"> Hotels </p>
+    
+      {% if hotels.length > 0 %}
+        <ul>
+          {% for hotel in hotels %}
+            <li>{{hotel['name']}}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        There are no pages. Why don't you <a href='/add'>add one</a>?
+      {% endif %}
+    	
+
+    	{% if restuarants.length > 0 %}
+        <ul>
+          {% for restaurant in restuarants %}
+            <li>{{restaurant['name']}}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        There are no pages. Why don't you <a href='/add'>add one</a>?
+      {% endif %}
+
+      {% if things.length > 0 %}
+        <ul>
+          {% for thing in things %}
+            <li>{{thing['name']}}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        There are no pages. Why don't you <a href='/add'>add one</a>?
+      {% endif %}
+  </div> 
+</div><!-- /.container -->
+    
+ 
+{% endblock %}
