@@ -19,11 +19,11 @@ router.get('/', function(req, res) {
 		done(err, things);
 		})
 	};		
-	
+
 	async.parallel(asyncTasks, function(err,data){
 		res.render('index', {title: "Trip Planner", hotels:data[0], restaurants:data[1], things:data[2]});
 		
-		});
+	});
 });
 
 
