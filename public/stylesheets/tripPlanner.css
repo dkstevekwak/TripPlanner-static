@@ -311,7 +311,7 @@ table {
 
 .entirePanel {
   float: right;
-  margin-top: 80px; }
+  margin-top: 69px; }
   .entirePanel .panel-heading {
     font-size: 26px;
     font-weight: bold;
@@ -320,10 +320,14 @@ table {
     height: 50px; }
   .entirePanel .upper-panel .panel-body {
     height: 400px; }
+    .entirePanel .upper-panel .panel-body .menu {
+      color: #8A8577; }
   .entirePanel .lower-panel .panel-heading {
     height: 50px; }
   .entirePanel .lower-panel .panel-body {
     height: 400px; }
+    .entirePanel .lower-panel .panel-body .menu {
+      color: #8A8577; }
 
 #footer {
   clear: both; }
@@ -354,7 +358,8 @@ table {
   margin-right: 20px; }
 
 .map-panel {
-  height: 100%; }
+  height: 100%;
+  padding: 0; }
 
 .col-lg-8 {
   clear: both; }
@@ -362,11 +367,13 @@ table {
 #map-canvas {
   width: 100%;
   margin-top: 70px;
-  height: 1000px; }
+  height: 1000px;
+  margin: 0; }
 
 .row {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  margin: 0; }
 
 .container {
   width: 100%; }
@@ -374,7 +381,7 @@ table {
 .navbar {
   height: 69px;
   background-color: #BD4225;
-  border-color: #BD4225; }
+  border-color: #89220A; }
 
 .menu-div .menu {
   font-size: 25px;
@@ -384,7 +391,7 @@ table {
   line-height: 10px; }
 .menu-div p {
   float: right;
-  margin: -2px 0; }
+  margin: 7px 0; }
 
 .glyphicon-plus-sign {
   font-size: 25px;
@@ -409,12 +416,19 @@ table {
 .btn-group {
   padding-left: 20px; }
 
+.options {
+  width: 390px;
+  height: 40px; }
+
+.container {
+  padding: 0; }
+
 @media (max-width: 1500px) {
   .menu-div .menu {
     font-size: 18px;
     font-weight: bold; }
   .menu-div select {
-    font-size: 13px; }
+    width: 300px; }
   .lower-panel h3 {
     font-size: 18px; }
   .lower-panel h4 {
@@ -444,7 +458,7 @@ table {
     font-size: 22px;
     font-weight: bold; }
   .menu-div select {
-    font-size: 17px; }
+    width: 400px; }
   .lower-panel h3 {
     font-size: 22px; }
   .lower-panel h4 {
@@ -465,7 +479,7 @@ table {
     font-size: 25px;
     font-weight: bold; }
   .menu-div select {
-    font-size: 16px; }
+    width: 400px; }
   .lower-panel h3 {
     font-size: 25px; }
   .lower-panel h4 {

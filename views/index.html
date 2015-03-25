@@ -15,7 +15,7 @@
 		        <!-- <h1>Welcome to {{title}}</h1> -->
 		        <div class= "menu-div">
 			        <h3 class="menu"> Hotels </h3>
-			        	<select> 
+			        	<select class='options'> 
 			          {% if hotels.length > 0 %}
 			              {% for hotel in hotels %}
 			               <option value="{{hotel['name']}}">{{hotel['name']}}</option>
@@ -26,24 +26,12 @@
 			            There are no pages. Why don't you <a href='/add'>add one</a>?
 			          {% endif %}
 			     </div>
-
-			     <div class="dropdown">
-			       <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-			         Dropdown
-			         <span class="caret"></span>
-			       </button>
-			       <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-			         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-			         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-			         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-			         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-			       </ul>
-			     </div>
+			   
 
 
 		        <div class= "menu-div">
 			        <h3 class="menu"> Restaurants </h3>
-			          	<select>
+			          	<select class='options'>
 			        	{% if restaurants.length > 0 %}
 			            
 			              {% for restaurant in restaurants %}
@@ -58,7 +46,7 @@
 
 		        <div class= "menu-div">
 			        <h3 class="menu"> Things To Do </h3>
-			          <select>
+			          <select class='options'>
 			        	{% if things.length > 0 %}
 			            
 			              {% for thing in things %}

@@ -18,7 +18,8 @@
 
 .entirePanel{
 	float:right;
-	margin-top: 80px;
+	margin-top: 69px;
+		
 	.panel-heading{
 		font-size: 26px;
 		font-weight: bold;
@@ -29,6 +30,10 @@
 	}
 	.upper-panel .panel-body{
 		height: 400px;
+		.menu{
+		color: #8A8577;
+			
+		}
 	}
 
 	.lower-panel .panel-heading{
@@ -36,6 +41,9 @@
 	}
 	.lower-panel .panel-body{
 		height: 400px;
+		.menu{
+			color: #8A8577;
+		}
 	}
 }
 
@@ -84,6 +92,7 @@
 }
 .map-panel {
 	height: 100%;
+	padding: 0;
 }
 
 .col-lg-8 {
@@ -93,11 +102,13 @@
 	width: 100%;
 	margin-top: 70px;
 	height: 1000px;
+	margin: 0;
 }
 
 .row {
 	width: 100%;
 	height: 100%;
+	margin: 0;
 }
 
 .container {
@@ -107,7 +118,7 @@
 .navbar {
 	height: 69px;
 	background-color:#BD4225;
-	border-color:#BD4225;
+	border-color:#89220A;
 }
 
 .menu-div{
@@ -128,7 +139,7 @@
 	}
 	p {
 		float:right;
-		margin: -2px 0;
+		margin: 7px 0;
 	}
 }
 
@@ -161,6 +172,14 @@
 
 .btn-group {
 	padding-left: 20px;
+}
+
+.options 	{
+	width:390px;
+	height: 40px;
+}
+.container {
+	padding: 0;
 }
 @import "media-queries";
 
