@@ -312,6 +312,10 @@ table {
 .entirePanel {
   float: right;
   margin-top: 80px; }
+  .entirePanel .panel-heading {
+    font-size: 26px;
+    font-weight: bold;
+    color: #DB836E; }
   .entirePanel .upper-panel .panel-heading {
     height: 50px; }
   .entirePanel .upper-panel .panel-body {
@@ -320,9 +324,6 @@ table {
     height: 50px; }
   .entirePanel .lower-panel .panel-body {
     height: 400px; }
-
-.menu {
-  font-size: 18px; }
 
 #footer {
   clear: both; }
@@ -337,16 +338,135 @@ table {
 .panel-heading {
   padding-top: 5px; }
 
+.navbar-inverse .navbar-brand {
+  color: #E5E4E4; }
+
+.navbar a {
+  color: #E5E4E4; }
+
 .navbar-brand {
-  line-height: 24px; }
+  line-height: 35px; }
   .navbar-brand span {
     padding-right: 12px; }
 
+.glyph {
+  font-size: 35px;
+  margin-right: 20px; }
+
 .map-panel {
   height: 100%; }
+
+.col-lg-8 {
+  clear: both; }
 
 #map-canvas {
   width: 100%;
   margin-top: 70px;
   height: 1000px; }
 
+.row {
+  width: 100%;
+  height: 100%; }
+
+.container {
+  width: 100%; }
+
+.navbar {
+  height: 69px;
+  background-color: #BD4225;
+  border-color: #BD4225; }
+
+.menu-div .menu {
+  font-size: 25px;
+  font-weight: bold; }
+.menu-div select {
+  font-size: 16px;
+  line-height: 10px; }
+.menu-div p {
+  float: right;
+  margin: -2px 0; }
+
+.glyphicon-plus-sign {
+  font-size: 25px;
+  color: #DB836E; }
+
+.glyphicon-remove-sign {
+  font-size: 25px;
+  color: #DB836E; }
+
+.panel-body .container {
+  padding: 0; }
+.panel-body p {
+  font-size: 15px;
+  display: inline;
+  margin-left: 8px;
+  font-weight: bold; }
+.panel-body h3 {
+  font-weight: bold; }
+.panel-body h4 {
+  display: inline-block; }
+
+.btn-group {
+  padding-left: 20px; }
+
+@media (max-width: 1500px) {
+  .menu-div .menu {
+    font-size: 18px;
+    font-weight: bold; }
+  .menu-div select {
+    font-size: 13px; }
+  .lower-panel h3 {
+    font-size: 18px; }
+  .lower-panel h4 {
+    font-size: 14px; } }
+
+@media (min-width: 1000px) and (max-width: 1330px) {
+  .col-lg-8 {
+    width: 100%; }
+  .col-md-8 {
+    width: 100%; }
+  .col-lg-4 {
+    width: 100%; }
+  .upper-panel {
+    float: left;
+    width: 48%;
+    display: inline-block;
+    margin-right: 1%; }
+  .lower-panel {
+    float: right;
+    width: 48%;
+    display: inline-block; }
+  .panel-body {
+    padding: 5px; }
+  .upper-panel .panel-heading {
+    font-size: 26px; }
+  .menu-div .menu {
+    font-size: 22px;
+    font-weight: bold; }
+  .menu-div select {
+    font-size: 17px; }
+  .lower-panel h3 {
+    font-size: 22px; }
+  .lower-panel h4 {
+    font-size: 17px; } }
+
+@media (max-width: 1000px) {
+  .col-lg-8 {
+    width: 100%; }
+  .col-md-8 {
+    width: 100%; }
+  .col-lg-4 {
+    width: 100%; }
+  .entirePanel {
+    width: 100%; }
+  .upper-panel .panel-heading {
+    font-size: 28px; }
+  .menu-div .menu {
+    font-size: 25px;
+    font-weight: bold; }
+  .menu-div select {
+    font-size: 16px; }
+  .lower-panel h3 {
+    font-size: 25px; }
+  .lower-panel h4 {
+    font-size: 16px; } }

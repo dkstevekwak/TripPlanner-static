@@ -8,42 +8,71 @@
   </head>
   <body>
   <script src="/bower_components/jquery/dist/jquery.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=API_HERE&sensor=true"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv-bCrH4vSHRt9FilP59hPqJSllsdVA4k&sensor=true"></script>
   <script type="text/javascript">
   function initialize_gmaps() {
-      // initialize new google maps LatLng object
-      var myLatlng = new google.maps.LatLng(40.705189,-74.009209);
-      // set the map options hash
-      var mapOptions = {
-          center: myLatlng,
-          zoom: 16,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      // get the maps div's HTML obj
-      var map_canvas_obj = document.getElementById("map-canvas");
-      // initialize a new Google Map with the options
-      var map = new google.maps.Map(map_canvas_obj, mapOptions);
-      // Add the marker to the map
-      var marker = new google.maps.Marker({
-          position: myLatlng,
-          title:"Hello World!"
-      });
-      // Add the marker to the map by calling setMap()
-      marker.setMap(map);
-  }
+        // initialize new google maps LatLng object
+        var myLatlng = new google.maps.LatLng(40.705450,-74.009400);
+        // set the map options hash
+        var mapOptions = {
+            center: myLatlng,
+            zoom: 16,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var image = 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQYzqobCj8D1Q5VinYQkoR9RbeopH6l0eB_98LFoYxGpw0MnBkC';
+        // get the maps div's HTML obj
+        var map_canvas_obj = document.getElementById("map-canvas");
+        // initialize a new Google Map with the options
+        var map = new google.maps.Map(map_canvas_obj, mapOptions);
+        // Add the marker to the map
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            icon: image
+            //title:"Hello World!"
+        });
+        //infowindow
+        var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Fullstack Academy</h1>'+
+        '<div id="bodyContent">'+
+        '<p><b>FSA</b>, also referred to as <b>Full Stack Academy</b>, is a large ' +
+        'sandstone rock formation in the southern part of the '+
+        'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+        'south west of the nearest large town, Alice Springs; 450&#160;km '+
+        '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+        'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+        'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+        'Aboriginal people of the area. It has many springs, waterholes, '+
+        'rock caves and ancient paintings. Uluru is listed as a World '+
+        'Heritage Site.</p>'+
+        '<p>Attribution: FSA, <a href="http://www.fullstackacademy.com/">'+
+        'http://www.fullstackacademy.com/</a> '+
+        '(last visited June 22, 2009).</p>'+
+        '</div>'+
+        '</div>';
+        var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+        google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
+        // Add the marker to the map by calling setMap()
+        marker.setMap(map);
+    }
       </script>
 
   <div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-    
-    <a class="navbar-brand glyph" href="/"><span class="glyphicon glyphicon-map-marker"></span>Trip Planner</a>
-    <a class="navbar-brand" href="/">Home</a>
-    <a class="navbar-brand" href="/">About</a>
-    <a class="navbar-brand" href="/">Contact</a>
-	</div>
+    <div class="container">
+      <div class="navbar-header"><!-- <span class="glyphicon glyphicon-menu-hamburger"></span> -->
+        <a class="navbar-brand glyph" href="/"><span class="glyphicon glyphicon-map-marker"></span>Trip Planner</a>
+        <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="/">About</a>
+        <a class="navbar-brand" href="/">Contact</a>
+	     </div>
+    </div>
   </div>
-</div>
    {% block content %}{% endblock %}
 
   </body>

@@ -3,10 +3,10 @@
 {% block content %}
 <div class = 'container'>
 	<div class = 'row'>
-		<div class = "map-panel col-lg-8">
+		<div class = "map-panel col-lg-8 col-md-8">
 			<div id='map-canvas'></div>
 		</div>
-		<div class = "entirePanel col-lg-4">
+		<div class = "entirePanel col-lg-4 col-md-4">
 		<div class="panel panel-default upper-panel">
 		  <div class="panel-heading">Welcome to Trip Planner!</div>
 		  <div class="panel-body">
@@ -21,10 +21,25 @@
 			               <option value="{{hotel['name']}}">{{hotel['name']}}</option>
 			              {% endfor %}
 			            </select>
+			            <p><span class="glyphicon glyphicon-plus-sign"></span></p>
 			          {% else %}
 			            There are no pages. Why don't you <a href='/add'>add one</a>?
 			          {% endif %}
 			     </div>
+
+			     <div class="dropdown">
+			       <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			         Dropdown
+			         <span class="caret"></span>
+			       </button>
+			       <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+			         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+			         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+			         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+			         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+			       </ul>
+			     </div>
+
 
 		        <div class= "menu-div">
 			        <h3 class="menu"> Restaurants </h3>
@@ -35,6 +50,7 @@
 			                 <option value="{{restaurant['name']}}">{{restaurant['name']}}</option>
 			              {% endfor %}
 			            </select>
+			            <p><span class="glyphicon glyphicon-plus-sign"></span></p>
 			          {% else %}
 			            There are no pages. Why don't you <a href='/add'>add one</a>?
 			          {% endif %}
@@ -49,6 +65,7 @@
 			                 <option value="{{thing['name']}}">{{thing['name']}}</option>
 			              {% endfor %}
 			            </select>
+			            <p><span class="glyphicon glyphicon-plus-sign"></span></p>
 			          {% else %}
 			            There are no pages. Why don't you <a href='/add'>add one</a>?
 			          {% endif %}
@@ -60,10 +77,9 @@
 
 
 
-		<h1> Day 2 <h1>
+		
 		<div class="panel panel-default lower-panel">
-		  <div class="panel-heading">
-		    <!-- <h3 class="panel-title">Panel title</h3> -->
+		  <div class="panel-heading"> Day 2
 			  <div class="btn-group" role="group" aria-label="...">
 			    <button type="button" class="btn btn-default">1</button>
 			    <button type="button" class="btn btn-default">2</button>
@@ -73,8 +89,11 @@
 		  </div>
 		  <div class="panel-body">
 		    <h3 class="menu"> My Hotel </h3>
+		    <h4>Wall Street Inn<p><span class="glyphicon glyphicon-remove-sign"></span></p><h4>
 		    <h3 class="menu"> Things To Do </h3>
+		    <h4>Hop Lee Restaurant<p><span class="glyphicon glyphicon-remove-sign"></span></p></h4>
 		    <h3 class="menu"> Things To Do </h3>
+		    <h4>National September 11th Memorial & Museum<p><span class="glyphicon glyphicon-remove-sign"></span></p></h4>
 		  </div>
 		</div>
 		</div>
