@@ -1,45 +1,86 @@
+{% extends "layout.html" %}
 
 {% block content %}
+<div class = 'container'>
+	<div class = 'row'>
+		<div class = "map-panel col-lg-8">
+			<div id='map-canvas'></div>
+		</div>
+		<div class = "entirePanel col-lg-4">
+		<div class="panel panel-default upper-panel">
+		  <div class="panel-heading">Welcome to Trip Planner!</div>
+		  <div class="panel-body">
+		    <div class="container">
+		      <div class="text-left">
+		        <!-- <h1>Welcome to {{title}}</h1> -->
+		        <div class= "menu-div">
+			        <h3 class="menu"> Hotels </h3>
+			        	<select> 
+			          {% if hotels.length > 0 %}
+			              {% for hotel in hotels %}
+			               <option value="{{hotel['name']}}">{{hotel['name']}}</option>
+			              {% endfor %}
+			            </select>
+			          {% else %}
+			            There are no pages. Why don't you <a href='/add'>add one</a>?
+			          {% endif %}
+			     </div>
 
- 
+		        <div class= "menu-div">
+			        <h3 class="menu"> Restaurants </h3>
+			          	<select>
+			        	{% if restaurants.length > 0 %}
+			            
+			              {% for restaurant in restaurants %}
+			                 <option value="{{restaurant['name']}}">{{restaurant['name']}}</option>
+			              {% endfor %}
+			            </select>
+			          {% else %}
+			            There are no pages. Why don't you <a href='/add'>add one</a>?
+			          {% endif %}
+			    </div>
 
-<div class="container">
-  <div class="text-left">
-    <h1>Welcome to {{title}}</h1>
-    <p class="lead"> Hotels </p>
-    	<select> 
-      {% if hotels.length > 0 %}
-          {% for hotel in hotels %}
-           <option value="{{hotel['name']}}">{{hotel['name']}}</option>
-          {% endfor %}
-        </select>
-      {% else %}
-        There are no pages. Why don't you <a href='/add'>add one</a>?
-      {% endif %}
+		        <div class= "menu-div">
+			        <h3 class="menu"> Things To Do </h3>
+			          <select>
+			        	{% if things.length > 0 %}
+			            
+			              {% for thing in things %}
+			                 <option value="{{thing['name']}}">{{thing['name']}}</option>
+			              {% endfor %}
+			            </select>
+			          {% else %}
+			            There are no pages. Why don't you <a href='/add'>add one</a>?
+			          {% endif %}
+			    </div>
+		      </div> 
+		    </div><!-- /.container -->
+		  </div>
+		</div>
 
-      	<select>
-    	{% if restaurants.length > 0 %}
-        
-          {% for restaurant in restaurants %}
-             <option value="{{restaurant['name']}}">{{restaurant['name']}}</option>
-          {% endfor %}
-        </select>
-      {% else %}
-        There are no pages. Why don't you <a href='/add'>add one</a>?
-      {% endif %}
 
-      <select>
-    	{% if things.length > 0 %}
-        
-          {% for thing in things %}
-             <option value="{{thing['name']}}">{{thing['name']}}</option>
-          {% endfor %}
-        </select>
-      {% else %}
-        There are no pages. Why don't you <a href='/add'>add one</a>?
-      {% endif %}
-  </div> 
-</div><!-- /.container -->
+
+		<h1> Day 2 <h1>
+		<div class="panel panel-default lower-panel">
+		  <div class="panel-heading">
+		    <!-- <h3 class="panel-title">Panel title</h3> -->
+			  <div class="btn-group" role="group" aria-label="...">
+			    <button type="button" class="btn btn-default">1</button>
+			    <button type="button" class="btn btn-default">2</button>
+			    <button type="button" class="btn btn-default">3</button>
+			    <button type="button" class="btn btn-default">+</button>
+			  </div>
+		  </div>
+		  <div class="panel-body">
+		    <h3 class="menu"> My Hotel </h3>
+		    <h3 class="menu"> Things To Do </h3>
+		    <h3 class="menu"> Things To Do </h3>
+		  </div>
+		</div>
+		</div>
+	</div>
+</div>
+
     
  
 {% endblock %}

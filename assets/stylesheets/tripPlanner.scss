@@ -1,8 +1,82 @@
-@import "normalize"
+@import "normalize";
+
+@mixin clearfix() {
+  &:after {
+    content: " ";
+    display: table;
+    clear:both;
+  }
+}
 
 
-body {
-	.container {
-		background = black;
+
+* {
+	box-sizing : border-box;
+}
+
+
+
+.entirePanel{
+	float:right;
+	margin-top: 80px;
+	
+	.upper-panel .panel-heading{
+			height: 50px;
+	}
+	.upper-panel .panel-body{
+		height: 400px;
+	}
+
+	.lower-panel .panel-heading{
+			height: 50px;
+	}
+	.lower-panel .panel-body{
+		height: 400px;
 	}
 }
+
+.menu {
+	font-size : 18px;
+
+}
+
+#footer {
+	clear: both;
+}
+
+
+.menu-div {
+	padding-bottom: 40px;
+}
+
+.btn-default {
+	// @include clearfix();
+
+	margin-right : 10px;
+	line-height: 18px;
+	
+}
+
+
+.panel-heading {
+	padding-top: 5px;
+}
+
+.navbar-brand {
+	line-height: 24px;
+	span {
+		padding-right : 12px;
+	}
+}
+.map-panel {
+	height: 100%;
+}
+
+#map-canvas {
+	width: 100%;
+	margin-top: 70px;
+	height: 1000px;
+}
+
+.row {}
+

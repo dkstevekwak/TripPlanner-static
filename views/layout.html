@@ -4,19 +4,48 @@
     <title></title>
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/stylesheets/tripPlanner.css" rel="stylesheet">
-  </head>
 
+  </head>
   <body>
-  <script src="/bower_components/jquery/dist/jqery.js"></script>
-  <div class="navbar navbar-inverse">
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=API_HERE&sensor=true"></script>
+  <script type="text/javascript">
+  function initialize_gmaps() {
+      // initialize new google maps LatLng object
+      var myLatlng = new google.maps.LatLng(40.705189,-74.009209);
+      // set the map options hash
+      var mapOptions = {
+          center: myLatlng,
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      // get the maps div's HTML obj
+      var map_canvas_obj = document.getElementById("map-canvas");
+      // initialize a new Google Map with the options
+      var map = new google.maps.Map(map_canvas_obj, mapOptions);
+      // Add the marker to the map
+      var marker = new google.maps.Marker({
+          position: myLatlng,
+          title:"Hello World!"
+      });
+      // Add the marker to the map by calling setMap()
+      marker.setMap(map);
+  }
+      </script>
+
+  <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-    <a class="navbar-brand" href="/">WIKISTACK</a>
-    <a class="navbar-brand" href="/add/">ADD PAGE</a>
+    
+    <a class="navbar-brand glyph" href="/"><span class="glyphicon glyphicon-map-marker"></span>Trip Planner</a>
+    <a class="navbar-brand" href="/">Home</a>
+    <a class="navbar-brand" href="/">About</a>
+    <a class="navbar-brand" href="/">Contact</a>
 	</div>
   </div>
 </div>
    {% block content %}{% endblock %}
+
   </body>
 
 
@@ -26,4 +55,8 @@
         <p class="text-muted">Trip Planner - DJ and Steve</p>
     </div>
 </div>
+<script>  $(document).ready(function() {
+      initialize_gmaps();
+  });
+      </script>
 </html>
